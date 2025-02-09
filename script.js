@@ -8,3 +8,14 @@ menuBtn.addEventListener('click', e => {
   const isOpen = navLinks.classList.contains('open');
   menuBtnIcon.setAttribute('class', isOpen ? 'ri-close-line' : 'ri-menu-line');
 });
+
+navLinks.addEventListener('click', e => {
+  navLinks.classList.remove('open');
+  menuBtnIcon.setAttribute('class', 'ri-menu-line');
+});
+
+const navSearch = document.getElementById('nav-search');
+
+navSearch.addEventListener('click', e => {
+  navSearch.classList.toggle('open');
+});
